@@ -145,7 +145,7 @@ if not model_already_computed:
 
     print('Model compiled')
 
-    history = model.fit(train_X, train_yOHE, epochs=1, callbacks=[reduce_lr, early_stop], validation_data=(test_X, test_yOHE))
+    history = model.fit(train_X, train_yOHE, epochs=3, callbacks=[reduce_lr, early_stop], validation_data=(test_X, test_yOHE))
 
     model.summary()
     model.save(r'model_hand.h5')
